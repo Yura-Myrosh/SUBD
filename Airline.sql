@@ -1,0 +1,9 @@
+CREATE TABLE Airline 
+( 
+Airline_Id INTEGER NOT NULL PRIMARY KEY, 
+Airline_Name VARCHAR(150) NOT NULL,
+ City VARCHAR(150) NOT NULL, 
+ Site VARCHAR(150), 
+ Director_Name VARCHAR(150) NOT NULL, 
+ Director_Last_Name VARCHAR(150) NOT NULL 
+ );

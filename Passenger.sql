@@ -1,0 +1,6 @@
+CREATE TABLE Passenger
+(
+Passenger_Id INTEGER NOT NULL PRIMARY KEY UNIQUE,
+Name_of_Passenger VARCHAR(150) NOT NULL,
+Last_Name_of_Passenger VARCHAR(150) NOT NULL
+);
