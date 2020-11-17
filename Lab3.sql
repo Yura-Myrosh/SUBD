@@ -1,0 +1,19 @@
+ALTER TABLE Ticket
+	DROP FOREIGN KEY Plane_id,
+	DROP INDEX Plane_Id;
+    
+ ALTER TABLE Ticket
+	DROP COLUMN Plane_Id,
+    MODIFY COLUMN Place;
+    
+ALTER TABLE Passenger
+	MODIFY COLUMN Name_of_Passenger CHAR(40) NULL;
+
+ALTER TABLE Ticket
+	ADD COLUMN Plane_Id INT(32) UNSIGNED NOT NULL,
+    ADD CONSTRAINT UNIQUE UQ_Plane_id (Ticket_Id, Plane_Id);
+
+ALTER TABLE Ticket
+	DROP FOREIGN KEY Passenger_Id,
+	ADD CONSTRAINT Passenger_Id_ FOREIGN KEY (Passenger_Id) REFERENCES passenger (Passenger_Id) 
+    ON DELETE CASCADE ON UPDATE CASCADE;
